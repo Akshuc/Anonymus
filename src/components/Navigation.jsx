@@ -8,6 +8,10 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Slide from '@mui/material/Slide';
+import img from "../logo1 1.png"
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import { alignPropType } from 'react-bootstrap/esm/types';
 
 const Navigation = (props) => {
 
@@ -17,39 +21,54 @@ const Navigation = (props) => {
         // will default to window.
         // This is only being set here because the demo is in an iframe.
         const trigger = useScrollTrigger({
-          target: window ? window() : undefined,
+            target: window ? window() : undefined,
         });
-      
+
         return (
-          <Slide appear={false} direction="down" in={!trigger}>
-            {children}
-          </Slide>
+            <Slide appear={false} direction="down" in={!trigger}>
+                {children}
+            </Slide>
         );
-      }
-      
-      HideOnScroll.propTypes = {
+    }
+
+    HideOnScroll.propTypes = {
         children: PropTypes.element.isRequired,
         /**
          * Injected by the documentation to work in an iframe.
          * You won't need it on your project.
          */
         window: PropTypes.func,
-      };
+    };
 
-  return (
-    <div>
+    return (
+        <div>
 
-<HideOnScroll {...props}>
-        <AppBar className='Child-2'>
-          <Toolbar>
-            <Typography variant="h6" component="div">
-              Scroll to hide App bar
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </HideOnScroll>
-    </div>
-  )
+            <HideOnScroll  {...props}>
+
+                <AppBar style={{ background: "rgba(4, 4, 5, 0.8)", opacity: "0.8", width: "1440px", height:"116px",left:"0",top:"1px"}}>
+
+                    <div className='Child-2'>
+
+                        
+                            <img className='img' src={img} alt="img" />
+
+                            <div className='item-2'>
+                                <NotificationsOutlinedIcon className='icon' />
+                                <div className='second'>
+                                    <div className='avtar'></div>
+                                
+                                <KeyboardArrowDownOutlinedIcon className='icon2' />
+                                </div>
+                                
+                            </div>
+
+                            
+                    </div>
+                </AppBar>
+
+            </HideOnScroll>
+        </div>
+    )
 }
 
 export default Navigation

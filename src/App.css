@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+.pp{
+    background: #1E1E1E;
+}
 .parent {
 
     height: 200vh;
@@ -23,35 +26,37 @@
 }
 
 .Child-2 {
-    position: absolute;
+    position: sticky;    
     display: flex;
-
-
-    justify-content: space-between;
     align-items: center;
-
-
-    width: 1440px;
-    height: 116px;
-    left: 0px;
-    top: 0px;
-    background: rgba(4, 4, 5, 0.8);
-    opacity: 0.8;
+    top: 30px;
+    padding-left: 30px;
+    justify-content: space-between;
+    
+    
     
 }
 
-.Child-2>img {
+
+
+.Child-2.img {
 
     width: 48px;
     height: 48px;
     margin: 35px;
     border-radius: 100px;
+    
+    
+
 
 }
 
 .item-2 {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
+    padding-right:30px ;
+    
+    
 
 }
 
@@ -63,7 +68,13 @@
     border-radius: 8px;
 }
 
-.item-2>.avtar {
+.item-2>.second{
+    display: flex;
+
+
+}
+
+.item-2>.second>.avtar {
     width: 40px;
     height: 40px;
     background-color: white;
@@ -72,11 +83,10 @@
     border-radius: 100px;
 }
 
-.item-2>.icon2 {
+.item-2>.second>.icon2 {
     width: 24px;
     height: 24px;
-
-
+    margin-top: 8px;
 }
 
 .Sidebar {
@@ -88,11 +98,11 @@
     justify-content: flex-start;
     
 
-    position: absolute;
+    position: sticky;
     width: 106px;
     height: 702px;
     left: 24px;
-    top: 160px;
+    top: 127px;
 
     /* Gradient 1 */
     background: linear-gradient(179.97deg, #272828 -37.39%, #0E0E0E 99.28%);

@@ -9,11 +9,16 @@ const App = ()=>{
 
     
     return(
+
+        <div className="pp">
+
+
         <div className="parent">
             
-            <div className='Child-1'></div>
+            
            <Navigation/>
            <SideBar/>
+        </div>
         </div>
     )
 }
